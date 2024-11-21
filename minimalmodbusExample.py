@@ -11,6 +11,8 @@ instrument.serial.stopbits = 1				# Specifies 1 stop bit
 instrument.serial.timeout = 1				# Sets timeout value
 instrument.mode = minimalmodbus.MODE_RTU	# Specifies the protocol
 
+reg = instrument.read_register(12363,0,4,True)
+print("Load Current: ", reg)
 
 reg = instrument.read_register(36898,0,3) # Reads low voltage register value
 # Arguments are: decimal register, number of decimals in data, function code
